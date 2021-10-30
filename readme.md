@@ -1,5 +1,5 @@
 # Internet History Website
-[Internect history](http://historyproject.eastus.azurecontainer.io/home.html)
+[Internet history](http://historyproject.eastus.azurecontainer.io/home.html)
 
 [Home page](http://historyproject.eastus.azurecontainer.io/home.html)
 
