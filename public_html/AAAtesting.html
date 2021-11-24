@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <!--Font awesome-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+  <!--lato google font-->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Roboto:ital,wght@0,500;0,700;1,400&family=Zen+Kurenaido&display=swap"
+        rel="stylesheet">
+  <title>AAA Testing</title>
+  <style>
+    body {
+      background: bisque;
+    }
+    .hero-image {
+      width: 100vw;
+    }
+
+    .hero-image img {
+      width: inherit;
+    }
+
+    .blue {
+      color: dodgerblue !important;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    .myfont-p {
+      font-family: 'Lato', sans-serif;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 1.5;
+    }
+
+    .myfont {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 700;
+    }
+
+    header {
+      text-align: center;
+      width: 46%;
+      margin: auto;
+      padding: 15px;
+    }
+    article {
+      width: 75%;
+      margin: 10px auto;
+    }
+    article img {
+      width: auto;
+    }
+    .my_img {
+      width: 50%;
+      heigth: 50vh;
+    }
+  </style>
+</head>
+<body>
+<!--navigation-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="https://i.ibb.co/xMsD3V8/www.jpg" alt="" width="50" height="30"
+           class="d-inline-block align-text-top">
+      InternetHistory
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active blue" aria-current="page" href="home.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link blue" href="oop.html">OOP</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link blue" href="pylint.html">Pylint</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!--navigation ends-->
+<!--header section-->
+<header>
+  <h1 class="myfont">AAA Testing Tutorial</h1>
+</header>
+<article>
+  <h3>What is AAA testing?</h3>
+  <p>AAA testing is just an acronym that stands for Arrange, Act and Assert.</p>
+  <p> In this tutorial we will be demonstrating how to use AAA testing on a simple calculator code.</p>
+  <ul>
+    <li>
+      <h5> Arrange</h5>
+      <p> Arrange, inputs and targets.
+        Arrange should set up the test case. It should answer the question, does the test require any objects or special settings?
+        What should come first? What does my test do? Arranging is basically just giving your unit test a structure.
+      </p>
+    </li>
+    <li>
+      <h5>Act</h5>
+      <p>Act on the target behavior.
+        Act - should cover the main thing to be tested. This  calls a function or method and keeps actions focused on the target behavior.
+        Act is telling your unit test what you are going to be doing, what test should be carried out.
+      </p>
+    </li>
+    <li>
+      <h5>Assert</h5>
+      <p>Then Assert expected outcomes.
+        Assert - verifies the goodness or badness of the result. Sometimes, assertions are as simple as checking numeric or string values.
+        Assertions will ultimately determine if the test passes or fails.</p>
+    </li>
+  </ul>
+  <h5>Let's take for example a simple calculator class that  adds and subtracts</h5>
+  <img src="../projectimages/aaa1.PNG" alt="">
+  <h5>Image 1.1. This is my calculator class</h5>
+  <p>In this tutorial calculator code is in my main.py file and the test file is in a different file.
+    For testing to work in a different file, the calculator class from main.py must be imported into the test file(calc_test.py).
+    This is one of the  many reasons why OOP is very powerful.
+  </p>
+  <img src="../projectimages/aaa2.PNG" alt="">
+  <h5>Image 1.2 The Test File</h5>
+  <p> In the Image 1.2 above, I have imported the calculator class to my current file.</p>
+  <p> Note:</p>
+  <p> For AAA testing in python the keyword Assert is used to call result instead of return or print.</p>
+  <h3>Why is testing important?</h3>
+  <ul>1.Testing  helps improve code quality significantly because all the small defects would have been identified and fixed before integration testing is done.</ul>
+  <ul>2.Testing simplifies the debugging process. If a test fails then only the latest changes made to the code will need to be debugged.</ul>
+  <ul>3.Testing also helps some developers, especially new developers understand code better.</ul>
+  <ul>4. Testing makes finding bugs easy and prevents wasting time to debug large volumes of code.</ul>
+  <ul>5. Testing overall helps in the long run against detecting depreciated codes or libraries of codes that a software depends on.</ul>
+  <p> For more information <a href=" https://performancelabus.com/unit-testing-importance/"> click </a></p>
+  <h3>how to use external data for testing</h3>
+  <p>Unit tests that have access to the file system are generally not a very good idea. This is because the test should be self-contained,
+    easily manipulated without having to go into the test code itself, by making your test data external to the test it's no longer immediately obvious what test the external file belongs to.
+    Let’s continue to use our class Calculator and pass some tests through it using a CSV file.
+    First, you need to create a CSV file that contains your test cases, in this case our test cases are numbers and the CSV will look like this.
+    <img class="my_img" src="../projectimages/aaa4.PNG" alt="">
+  <h5>Image1.3 CSV File</h5></p>
+  <p>You cannot pass your data into your test like this, so we have to separate them with commas and ensure the data is prepared to be used in the test cases.
+    To make this easier, let’s move the data directly from our test.py file by importing the csv module to help us manage the CSV file.
+  </p>
+  <img src="../projectimages/aaa5.PNG" alt="">
+  <h5>Image1.4</h5>
+  <h5>Breakdown of image1.4</h5>
+  <ul>Line 1: Imports the calculator class from the calculator file in the calc folder</ul>
+  <ul>Line 2: Imports the CSV module to help us manage the CSV file</ul>
+  <ul>Line 5: This is the absolute file path of my CSV file, why i have a full stop before a forward slash is to tell python that the file is in the same folder as where
+    I have my test file.py.</ul>
+  <ul>Line 7: This declares the object of my data, in this case my data are just regular numbers and do not need to be converted into an object.</ul>
+  <ul>Line 9: Here, I am converting my data into a list, so i can iterate over them easily.</ul>
+  <ul>Lines 12-18: Is loading the csv files </ul>
+  <ul>Line  21 -25 : Is closing the csv file after loading. </ul>
+  <img src="../projectimages/aaa6.PNG" alt="">
+  <h5>Image 1.5</h5>
+  <ul>Lines 28- 37 is testing code using AAA testing with the imported csv file.</ul>
+  <img src="../projectimages/aaa7.PNG" alt="">
+  <h5>Image 1.6 </h5>
+  <p>Image 1.6 shows the result of the testing.</p>
+</article>
+<footer class="bg-light row d-flex justify-content-evenly py-4">
+  <div class="col-4">
+    <a href=""><i class="fab fa-instagram fa-2x"></i></a>
+    <a href="https://github.com/adeode123/InternetHistory"><i class="fab fa-github fa-2x"></i></a>
+    <a href=""> <i class="fab fa-youtube fa-2x"></i></a>
+  </div>
+  <div class="col-4">
+    <a href="https://validator.w3.org/">
+      <img src="../projectimages/w3c%20validator%20img.png" alt="w3c logo" width="40" height="40">
+    </a>
+  </div>
+  <div class="col-4">
+    <a href=""><i class="far fa-copyright fa-2x">2021 Abosede Oderinde</i></a>
+  </div>
+</footer>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous">
+</script>
+
+
+</body>
+</html>
