@@ -1,10 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!--Font awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>Design Pattern</title>
+    <style>
+        body {
+            background: antiquewhite;
+        }
 
+        .code-txt {
+            color: #fff;
+        }
+
+        .img-size {
+            width: 90%;
+            margin: 1px 50px;
+            height: 320px;
+        }
+
+        .comment {
+            color: darkgray;
+        }
+
+        .space1 {
+            margin-left: 20px;
+        }
+
+        .space2 {
+            margin-left: 30px;
+        }
+
+        .code-width {
+            width: 50%;
+            margin: 10px auto;
+            padding-left: 30px;
+        }
+
+        article {
+            width: 75%;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="https://i.ibb.co/xMsD3V8/www.jpg" alt="" width="50" height="30"
+                    class="d-inline-block align-text-top">
+                InternetHistory
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active blue" aria-current="page" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link blue" href="AAAtesting.html">Testing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link blue" href="pylint.html">Pylint</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <header class="display-6 text-center my-3 mx-3">DESIGN PATTERNS</header>
+        <article class="main-width">
+            <div>
+                <h3>What are Design Patterns?</h3>
+                <p>According to the book called “Design Patterns: Elements of Reusable Object-Oriented Software by
+                    GoF(Gang of Four)”.
+                    Design patterns are referred to as the Gang of Four patterns. They are considered the foundation for
+                    all other patterns.
+                    They are Categorized into three groups: Structural, Creational and Behavioural.
+                </p>
+                <p>Design patterns describe the structure of code classes and how these classes should collaborate,
+                    building reusable and
+                    extensible software.</p>
+                <p>Learning these design patterns helps to communicate ideas with other developers at a more abstract
+                    level without writing
+                    unnecessarily long lines of codes. It also helps new developers understand new programming
+                    languages, libraries and
+                    frameworks quickly.</p>
+            </div>
+            <div>
+                <h3>Structural Design Patterns:</h3>
+                <p>These types of design patterns are focused on Classes and Objects compositions that are the
+                    relationships between these
+                    objects. Structural class patterns use inheritance to compose interfaces and Object patterns define
+                    ways to compose
+                    objects to obtain new functionality.</p>
+                <p>A decorator is a type of a structural design pattern. It instantiates the object and adds
+                    responsibility to the object.
+                    In the calculator code example, the values are the attributes of the calculator. This makes using
+                    values alone in the
+                    other part of the programs possible without having to type self repeatedly.</p>
+                <div class="bg-dark code-txt code-width">
+                    <i class="space1">def __init__(self, values):</i><br>
+                    <i class="space1">self.values = values</i><br>
+                </div>
+            </div>
+            <div>
+                <h3>Creational Design Patterns:</h3>
+                <p>Creational design patterns are all about class instantiation and creating objects. This pattern can
+                    be further divided
+                    into class-creation patterns and object-creational patterns, in class creation patterns the
+                    inheritance is used
+                    effectively in the instantiation process, while the object-creation patterns use delegation
+                    effectively to get the job
+                    done.</p>
+                <p>Factory method is one of the subdivisions of creational structure. It is used to create an instance
+                    of several derived
+                    classes. It helps us to avoid constant code modification whenever a new object needs to be created.
+                    For instance in our
+                    calculator example I have a factory function that performs different methods without needing to
+                    change the other.</p>
+                <div class="bg-dark code-txt code-width">
+                    <i>def factory(self, operation):</i><br>
+                    <i class="space1">""" Factory helper method """</i><br>
+                    <i class="space1">if operation == 'add':</i><br>
+                    <i class="space2">add_object = Add.create(*self.values)</i><br>
+                    <i class="space2">result = add_object.add()</i><br>
+                    <i class="space1">Calculator.add_calculation_to_history({</i><br>
+                    <i class="space2">"result": result,</i><br>
+                    <i class="space2">"object": add_object</i><br>
+                    <i class="space1">})</i><br>
+                    <i class="space1">return result</i><br>
+                </div>
+                <div class="bg-dark code-txt code-width">
+                    <i>if operation == 'subtract':</i><br>
+                    <i class="space1">subtract_object = Subtract.create(*self.values)</i><br>
+                    <i class="space1">result = subtract_object.subtract()</i><br>
+                    <i class="space1">Calculator.add_calculation_to_history({</i><br>
+                    <i class="space2">"result": result,</i><br>
+                    <i class="space2">"object": subtract_object</i><br>
+                    <i class="space1">})</i><br>
+                    <i class="space1">return result</i><br>
+                </div>
+                <div class="bg-dark code-txt code-width">
+                    <i>if operation == 'multiply':</i><br>
+                    <i class="space1">multiply_object = Multiply.create(*self.values)</i><br>
+                    <i class="space1">result = multiply_object.multiply()</i><br>
+                    <i class="space1">Calculator.add_calculation_to_history({</i><br>
+                    <i class="space2">"result": result,</i><br>
+                    <i class="space2">"object": multiply_object</i><br>
+                    <i class="space1">})</i><br>
+                    <i class="space1">return result</i><br>
+                </div>
+                <div class="bg-dark code-txt code-width">
+                    <i>if operation == 'divide':</i><br>
+                    <i class="space1">divide_object = Divide.create(*self.values)</i><br>
+                    <i class="space1">result = divide_object.divide()</i><br>
+                    <i class="space1">Calculator.add_calculation_to_history({</i><br>
+                    <i class="space2">"result": result,</i><br>
+                    <i class="space2">"object": divide_object</i><br>
+                    <i class="space1">})</i><br>
+                    <i class="space1">return result</i><br>
+                    <i class="space1">return "Invalid Operation"</i><br>
+                </div>
+            </div>
+            <div>
+                <h3>Behavioral Designs Patterns:</h3>
+                <p>Behavioral design patterns focus on the communications and interactions between objects and their
+                    responsibilities in a
+                    code.
+                    They are the largest part of the design pattern. They basically show the relationships between
+                    functions.</p>
+                <p>For instance in our calculator code, the fixture of clear history is an example of a command which is
+                    a type of
+                    behavioral design pattern.</p>
+                <div class="bg-dark code-txt code-width">
+                    <i>def test_clear_history(calculator_object):</i><br>
+                    <i class="space1">""" Test clear history of calculator """</i><br>
+                    <i class="space1">calculator_object.factory("add")</i><br>
+                    <i class="space1">calculator_object.factory("multiply")</i><br>
+                    <i class="space1">calculator_object.clear_history()</i><br>
+                    <i class="space1">assert len(calculator_object.get_history()) == 0</i><br>
+                </div>
+            </div>
+            <div>
+                <h3>Memento is another type of design pattern.</h3>
+                <p>This pattern saves and restores an object’s internal state. A good example of the memento pattern
+                    would be the undo
+                    button or in the case of our calculator code, the history function in our calculator can be referred
+                    to as the memento.</p>
+                <div class="bg-dark code-txt code-width">
+                    <i>def get_history():</i><br>
+                    <i class="space1">""" History of calculator operations"""</i><br>
+                    <i class="space1">return Calculator.calculator_history</i><br>
+                </div>
+                <a href="https://www.geeksforgeeks.org/python-design-patterns/">
+                    <p>For more info</p>
+                </a>
+            </div>
+
+        </article>
+    </main>
+    <footer class="bg-light row d-flex justify-content-evenly py-4">
+        <div class="col-4">
+            <a href=""><i class="fab fa-instagram fa-2x"></i></a>
+            <a href="https://github.com/adeode123/InternetHistory"><i class="fab fa-github fa-2x"></i></a>
+            <a href=""> <i class="fab fa-youtube fa-2x"></i></a>
+        </div>
+        <div class="col-4">
+            <a href="https://validator.w3.org/">
+                <img src = "../projectimages/w3c.png" alt="w3c logo" width="40" height="40">
+            </a>
+        </div>
+        <div class="col-4">
+            <a href=""><i class="far fa-copyright fa-2x">2021 Abosede Oderinde</i></a>
+        </div>
+    </footer>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
