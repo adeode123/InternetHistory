@@ -1,8 +1,8 @@
 # Internet History Website
-[Internet history](http://historyproject.eastus.azurecontainer.io/home.html)
+[AAA testing Article](pylintproject.eastus.azurecontainer.io/AAAtesting.html)
 
-[Home page](http://historyproject.eastus.azurecontainer.io/home.html)
+[Design Pattern Article](pylintproject.eastus.azurecontainer.io/designpattern.html)
 
-[Inventions page](http://historyproject.eastus.azurecontainer.io/inventions.html)
+[OOP Article](pylintproject.eastus.azurecontainer.io/oop.html)
 
-[people page](http://historyproject.eastus.azurecontainer.io/people.html)
+[Pylint Article](pylintproject.eastus.azurecontainer.io/pylint.html)
